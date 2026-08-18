@@ -1,14 +1,14 @@
+import '../Styles/DifficultySelector.css'
 export default function DifficultySelector({ setDifficulty }) {
   return (
     <div className="difficulty-overlay">
       <div className="difficulty-card">
-        <h2>Pokémon Memory Game</h2>
+        <h2>POKMEMO MEMORY GAME </h2>
         <p className="game-description">
-          Test your memory! Click on unique Pokémon cards without repeating any. 
-          Every time you click a card, they will shuffle randomly. How high can you score?
+          Test your memory! Click on unique Pokémon cards without repeating any. How high can you score?
         </p>
         
-        <h3>Select Difficulty</h3>
+        <h3>SELECT DIFFICULTY</h3>
         <div className="button-group">
           <button className="diff-btn easy" onClick={() => setDifficulty(6)}>
             Easy <span className="card-count">(6 Cards)</span>

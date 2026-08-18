@@ -1,0 +1,77 @@
+.difficulty-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #082745; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.difficulty-card {
+  background:  #FFF2BA; 
+  border: 4px solid #FFF2BA; 
+  padding: 2.5rem;
+  text-align: center;
+  max-width: 450px;
+}
+
+.difficulty-card h2 {
+  font-family: 'Press Start 2P', monospace;
+  color:#082745; 
+  margin-top: 0;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  margin-bottom: 1.2rem;
+}
+
+.game-description {
+  font-family: 'Inter', sans-serif;
+  color: #0F3C65; 
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.difficulty-card h3 {
+  font-family: 'Inter', sans-serif;
+  color: #0F3C65; 
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.diff-btn {
+  font-family: 'Inter', sans-serif;
+  padding: 0.9rem 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: #FFF2BA;
+  color: #0F3C65;
+  border: 3px solid #082138;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px #082138;
+}
+
+.diff-btn:hover {
+  background-color:  #0F3C65; 
+  color: #FFF2BA;
+}
+
+
+.card-count {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  font-weight: 600;
+}
+
