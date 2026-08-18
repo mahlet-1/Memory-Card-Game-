@@ -1,13 +1,12 @@
+import '../Styles/Header.css'
+
 export default function Header({ score, bestScore }) {
   return (
     <header className="header-container">
-      <div className="app-title">
-        <h1>Pokememo</h1>
-        <p>Catch 'em all, but don't click the same one twice!</p>
-      </div>
+      <h1 className="game-title">Pokmemo</h1>
       <div className="score-board">
-        <p>Score:{score}</p>
-        <p>Best Score: {bestScore}</p>
+        <p>Score: <span>{score}</span></p>
+        <p>Best Score: <span>{bestScore}</span></p>
       </div>
     </header>
   );

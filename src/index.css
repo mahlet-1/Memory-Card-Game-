@@ -1,0 +1,10 @@
+body {
+  background-image: 
+    linear-gradient(rgba(218, 210, 160, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(218, 210, 160, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #03073b;
+  color:  #d1cbac;
+}
