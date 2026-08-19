@@ -1,4 +1,4 @@
-.modal-overlay {
+.over-modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -11,7 +11,7 @@
   z-index: 1000;
 }
 
-.modal-content {
+.over-modal-content {
   background: #0F3C65; 
   border: 4px solid #FFF2BA; 
   padding: 2.5rem;
@@ -21,7 +21,7 @@
   box-shadow: 8px 8px 0px #082138;
 }
 
-.modal-content h2 {
+.over-modal-content h2 {
   font-family: 'Press Start 2P', monospace;
   color: #FFF2BA;
   margin-top: 0;
@@ -30,7 +30,7 @@
   text-shadow: 3px 3px 0px #082138;
 }
 
-.modal-content p {
+.over-modal-content p {
   font-family: 'Inter', sans-serif;
   color: #FFF2BA;
   font-size: 0.95rem;
@@ -52,5 +52,3 @@
   cursor: pointer;
   box-shadow: 4px 4px 0px #082138;
 }
-
-
