@@ -80,11 +80,22 @@ export default function App() {
     setCards(shuffleArray(cards));
   }
 
-  const handleReset = () => {
+const handleReset = () => {
     setScore(0);
     setClickedCardIds([]);
     setIsWon(false);
     setIsGameOver(false);
+    setCards(shuffleArray(cards)); 
+  };
+
+
+  const handleMainMenu = () => {
+    setScore(0);
+    setClickedCardIds([]);
+    setIsWon(false);
+    setIsGameOver(false);
+    setCards([]); 
+    setDifficulty(null); 
   };
 
   return (
@@ -115,6 +126,7 @@ export default function App() {
           setClickedCardIds={setClickedCardIds} 
           setScore={setScore}
           onPlayAgain={handleReset}
+          onRestart={handleMainMenu}
         />
       )}
 
@@ -127,6 +139,7 @@ export default function App() {
           setClickedCardIds={setClickedCardIds} 
           setScore={setScore}
           onPlayAgain={handleReset}
+          onRestart={handleMainMenu}
         />
       )}
     </div>
