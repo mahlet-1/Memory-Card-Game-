@@ -1,9 +1,8 @@
 export default function Card({ pokemon, onCardClick }) {
   return (
-    <div className="card">
-        onClick={() => onCardClick(pokemon.id)}
-        <img src={pokemon.image} alt={pokemon.name} />
-        <p>{pokemon.name}</p>
+    <div className="memory-card" onClick={() => onCardClick(pokemon.id)}>
+      <img src={pokemon.image} alt={pokemon.name} />
+      <span className="card-name">{pokemon.name}</span>
     </div>
   );
 }
