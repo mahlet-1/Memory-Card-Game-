@@ -1,10 +1,11 @@
+import '../Styles/GameOverModal.css'
 export default function GameOverModal({ onPlayAgain }) {
   return (
     <div className="modal-overlay">
       <div className="modal-content">
-        <h2>Game Over</h2>
-        <p>Oops! You already clicked that Pokemon. Better luck on your next try!</p>
-        <button onClick={onPlayAgain}>Try Again</button>
+        <h2>GAME OVER </h2>
+        <p>Oops! You already clicked that card. Better luck on your next try!</p>
+        <button className = "game-over-btn" onClick={onPlayAgain}>TRY AGAIN</button>
       </div>
     </div>
   );

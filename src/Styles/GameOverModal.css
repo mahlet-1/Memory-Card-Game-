@@ -1,0 +1,56 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(15, 60, 101, 0.85); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #0F3C65; 
+  border: 4px solid #FFF2BA; 
+  padding: 2.5rem;
+  text-align: center;
+  max-width: 450px;
+  width: 90%;
+  box-shadow: 8px 8px 0px #082138;
+}
+
+.modal-content h2 {
+  font-family: 'Press Start 2P', monospace;
+  color: #FFF2BA;
+  margin-top: 0;
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+  text-shadow: 3px 3px 0px #082138;
+}
+
+.modal-content p {
+  font-family: 'Inter', sans-serif;
+  color: #FFF2BA;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.game-over-btn {
+  font-family: 'Inter', sans-serif;
+  padding: 0.9rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  width: 200px;
+  border-radius: 1000px;
+  background-color: #FFF2BA;
+  color: #0F3C65;
+  border: 3px solid #082138;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px #082138;
+}
+
+
