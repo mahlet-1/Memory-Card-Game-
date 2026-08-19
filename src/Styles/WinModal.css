@@ -50,4 +50,19 @@
   border: 3px solid #082138;
   cursor: pointer;
   box-shadow: 4px 4px 0px #082138;
+  margin-right: 15px;
+}
+
+.menu-btn{
+  font-family: 'Inter', sans-serif;
+  padding: 0.9rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  width: 200px;
+  border-radius: 1000px;
+  background-color:  #0F3C65;
+  color: #FFF2BA;
+  border: 3px solid #082138;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px #082138;
 }
