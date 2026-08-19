@@ -80,6 +80,13 @@ export default function App() {
     setCards(shuffleArray(cards));
   }
 
+  const handleReset = () => {
+    setScore(0);
+    setClickedCardIds([]);
+    setIsWon(false);
+    setIsGameOver(false);
+  };
+
   return (
     <div className="app">
       <Header score={score} bestScore={bestScore} />
@@ -107,6 +114,7 @@ export default function App() {
           setIsWon={setIsWon} 
           setClickedCardIds={setClickedCardIds} 
           setScore={setScore}
+          onPlayAgain={handleReset}
         />
       )}
 
@@ -118,6 +126,7 @@ export default function App() {
           setIsGameOver={setIsGameOver} 
           setClickedCardIds={setClickedCardIds} 
           setScore={setScore}
+          onPlayAgain={handleReset}
         />
       )}
     </div>

@@ -1,5 +1,5 @@
 import '../Styles/WinModal.css'
-export default function WinModal({ onPlayAgain }) {
+export default function WinModal({ onPlayAgain}) {
   return (
     <div className="win-modal-overlay">
       <div className="win-modal-content">
