@@ -6,6 +6,7 @@
   background-color: transparent;           
   color: #f4e8c1;
   margin-bottom: 2rem;
+  position: relative;
 }
 
 .game-title {
@@ -30,4 +31,30 @@
 
 .score-board span {
   color: #c89b20;
+}
+
+.header-actions {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  display: flex;
+  gap: 10px;
+}
+
+.header-btn {
+  font-family: 'Inter', sans-serif;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: 1000px;
+  background-color: #d0c383;
+  color: #0F3C65;           
+  border: 3px solid #082138;
+  cursor: pointer;
+  box-shadow: 3px 3px 0px #082138;
+}
+
+.header-btn:hover {
+  background-color: #9a905e;
+  color: #ffffff;
 }

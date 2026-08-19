@@ -100,7 +100,13 @@ const handleReset = () => {
 
   return (
     <div className="app">
-      <Header score={score} bestScore={bestScore} />
+      <Header 
+      score={score} 
+      bestScore={bestScore} 
+      onPlayAgain={handleReset} 
+      onRestart={handleMainMenu}
+      
+      />
 
       {error && (
         <div className="error-container">
