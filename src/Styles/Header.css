@@ -3,27 +3,24 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 1rem 1.5rem;
-  background-color: #FFF2BA; 
-  border: 4px solid #082138;
-  border-radius: 16px;
-  box-shadow: 6px 6px 0px #082138;
-  color: #0F3C65; 
-  margin-bottom: 2rem;
+  margin: 0;
+  padding: 1rem 2rem;
+  background-color: rgba(255, 242, 186, 0.25); 
+  border-bottom: 4px solid #FFF2BA;
+  box-shadow: 0 6px 0px #0f172a; 
   box-sizing: border-box;
 }
 
 .header-left {
   display: flex;
   align-items: center;
-  gap: 12px;
 }
 
 .game-logo {
   height: 48px;
   width: auto;
   object-fit: contain;
-  filter: drop-shadow(2px 2px 0px #082138);
+  filter: drop-shadow(2px 2px 0px #0f172a);
 }
 
 .game-title {
@@ -31,40 +28,45 @@
   font-size: 1.4rem;
   font-weight: 700;
   font-family: 'Press Start 2P', monospace;
-  color: #0F3C65; 
-  text-shadow: 2px 2px 0px #d0c383;
+  color: #FFF2BA; 
+  text-shadow: 3px 3px 0px #0f172a;
 }
+
 .score-board {
   display: flex;
   gap: 2rem;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  color: #0F3C65; 
+  color: #1E1B4B; 
   font-family: 'Press Start 2P', monospace;
   margin: 0;
+  text-shadow: 2px 2px 0px #FFF2BA; 
 }
 
 .score-board span {
-  color: #c89b20; 
+  color: #1E1B4B; 
 }
 
 .header-actions {
   display: flex;
-  gap: 10px;
+  gap: 19px;
 }
+
 .header-btn {
   font-family: 'Inter', sans-serif;
-  padding: 0.6rem 1.2rem;
-  font-size: 0.9rem;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
   font-weight: 700;
-  border-radius: 1000px;
-  background-color: #0F3C65; 
-  color: #FFF2BA;           
-  border: 3px solid #082138;
+  border-radius: 12px;
+  background-color: #FFF2BA; 
+  color: #0f172a; 
+  border: 3px solid #0f172a; 
   cursor: pointer;
-  box-shadow: 3px 3px 0px #082138;
+  box-shadow: 4px 4px 0px #0f172a; 
 }
 
 .header-btn:hover {
-  background-color: #316ca0;
+  background-color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 4px 7px 0px #0f172a;
 }

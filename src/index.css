@@ -1,10 +1,9 @@
-body {
-  background-image: 
-    linear-gradient(rgba(218, 210, 160, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(218, 210, 160, 0.05) 1px, transparent 1px);
-  background-size: 20px 20px;
-  min-height: 100vh;
+html,body {
   margin: 0;
-  background-color: #082745; 
-  color:  #d1cbac;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #60a5fa 0%, #fff2ba 100%);
+  background-attachment: fixed;
+  overflow-x: hidden;
 }
