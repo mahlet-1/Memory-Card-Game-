@@ -10,7 +10,11 @@ export default function App() {
   const [cards, setCards] = useState([]);
   const [clickedCardIds, setClickedCardIds] = useState([]);
   const [score, setScore] = useState(0);
-  const [bestScore, setBestScore] = useState(0);
+  const [bestScore, setBestScore] = useState(()=> {
+    const saved = localStorage.getItem('bestscore');
+    return saved? JSON.parse(saved) : 0 ;
+  });
+
   const [isWon, setIsWon] = useState(false);
   const [isGameOver, setIsGameOver] = useState(false);
   const [error, setError] = useState(null);
@@ -67,6 +71,7 @@ export default function App() {
 
     if (newScore > bestScore) {
       setBestScore(newScore);
+      localStorage.setItem('bestscore' , JSON.stringify(newScore));
     }
 
     const updatedClickedIds = [...clickedCardIds, pokemonId];

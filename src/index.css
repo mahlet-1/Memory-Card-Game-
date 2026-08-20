@@ -4,6 +4,5 @@ html, body {
   width: 100%;
   min-height: 100vh;
   background: linear-gradient(180deg, #60a5fa 0%, #fff2ba 100%);
-  background-attachment: fixed;
   overflow-x: hidden;
 }
