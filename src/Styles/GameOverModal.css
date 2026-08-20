@@ -1,70 +1,77 @@
+
 .over-modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(15, 60, 101, 0.85); 
+  background-color: rgba(69, 100, 186, 0.65); 
+  backdrop-filter: blur(6px);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  animation: fadeIn 0.2s ease-in-out;
 }
 
 .over-modal-content {
-  background: #0F3C65; 
-  border: 4px solid #FFF2BA; 
-  padding: 2.5rem;
-  text-align: center;
-  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 90%;
-  box-shadow: 8px 8px 0px #082138;
+  max-width: 500px;
+  padding: 2.5rem 2rem;
+  background-color: rgba(255, 242, 186, 0.25); 
+  border: 4px solid #FFF2BA; 
+  border-radius: 20px;
+  box-shadow: 0 10px 0px #60a5fa; 
+  backdrop-filter: blur(8px);
+  box-sizing: border-box;
+  text-align: center;
+  gap: 0.5rem;
 }
 
 .over-modal-content h2 {
   font-family: 'Press Start 2P', monospace;
+  font-size: 1.15rem;
   color: #FFF2BA;
-  margin-top: 0;
-  font-size: 1.3rem;
-  margin-bottom: 1.2rem;
-  text-shadow: 3px 3px 0px #082138;
+  margin: 0 0 1rem 0;
+  text-shadow: 3px 3px 0px #1e3a8a;
+  line-height: 1.4;
 }
+
 
 .over-modal-content p {
   font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
   color: #FFF2BA;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 2rem;
-  opacity: 0.9;
+  margin: 0 0 2rem 0;
+  text-shadow: 1px 1px 0px #1e3a8a;
+  line-height: 1.5;
 }
 
-.game-over-btn {
+.game-over-btn,
+.menu-btn {
   font-family: 'Inter', sans-serif;
-  padding: 0.9rem 1.5rem;
+  width: 100%;
+  padding: 1rem 1.2rem;
   font-size: 1rem;
   font-weight: 700;
-  width: 200px;
-  border-radius: 1000px;
+  border-radius: 14px;
   background-color: #FFF2BA;
-  color: #0F3C65;
-  border: 3px solid #082138;
+  color: #1e3a8a;        
+  border: 3px solid #60a5fa;
   cursor: pointer;
-  box-shadow: 4px 4px 0px #082138;
-  margin-right:15px;
+  box-shadow: 4px 4px 0px #60a5fa;
+  box-sizing: border-box;
+  margin-top: 0.75rem;
 }
 
-.menu-btn{
-  font-family: 'Inter', sans-serif;
-  padding: 0.9rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 700;
-  width: 200px;
-  border-radius: 1000px;
-  background-color: #FFF2BA;
-  color: #0F3C65;
-  border: 3px solid #082138;
-  cursor: pointer;
-  box-shadow: 4px 4px 0px #082138;
-
+.game-over-btn:hover,
+.menu-btn:hover {
+  background-color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 4px 7px 0px #60a5fa;
 }
+
