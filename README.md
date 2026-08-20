@@ -1,16 +1,60 @@
-# React + Vite
+# Cv Builder Web
+> Welcome to my React Memory Card Game project! I built this interactive single-page web game where players test their focus and memory by clicking unique cards without selecting the same one twice. It features dynamic difficulty levels, live score tracking and retro-styled theme.
+### 🔗 Links
+* **Live Demo:** [View Live Application]()
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Difficulty Levels**: Give option to choose challenge mode before starting the game.
 
-## React Compiler
+- **Live Score & Best Score Tracking**: Keeps track of current score and dynamically updates high score.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Retro styled theme**: tried to give it a vibe of old games.
 
-## Expanding the ESLint configuration
+- **Card Shuffling**: Cards dynamically shuffle positions after every click.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Responsive Layout**: The styling also contains mobile responsiveness.
+
+- **Lazy State Initialization**: Uses local storage to save  best score so it stays saved even after refreshing the page.
+
+## Tech Stack
+
+- **HTML & Standard CSS**
+- **React** (as a framework)
+- **Vanilla JavaScript**
+- **Vite** (as a local compiler and bundler)
+- **GitHub** (for version control)
+
+## Getting Started Locally
+
+Follow these steps to set up and run the project on your local server:
+
+### Prerequisites
+Make sure you have **Node.js** and **npm** installed on your system.
+
+
+### Installation & Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/mahlet-1/Memory-Card-Game-.git
+   cd Memory-Game
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production:**
+   ```bash
+   npm run build
+   ```
+
+
