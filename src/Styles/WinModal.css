@@ -4,7 +4,8 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(15, 60, 101, 0.85); 
+  background-color: rgba(69, 100, 186, 0.65); 
+  backdrop-filter: blur(6px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,57 +13,64 @@
 }
 
 .win-modal-content {
-  background: #FFF2BA; 
-  border: 4px solid #0F3C65; 
-  padding: 2.5rem;
-  text-align: center;
-  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 90%;
-  box-shadow: 8px 8px 0px #082138;
+  max-width: 500px;
+  padding: 2.5rem 2rem;
+  background-color: rgba(255, 242, 186, 0.25);
+  border: 4px solid #FFF2BA; 
+  border-radius: 20px;
+  box-shadow: 0 10px 0px #60a5fa; 
+  backdrop-filter: blur(8px);
+  box-sizing: border-box;
+  text-align: center;
+  gap: 0.5rem;
 }
 
 .win-modal-content h2 {
   font-family: 'Press Start 2P', monospace;
-  color: #0F3C65;
-  font-size: 1.3rem;
-  margin-bottom: 1.2rem;
-  text-shadow: 3px 3px 0px #FFF2BA;
+  font-size: 1.15rem;
+  color: #FFF2BA;
+  margin: 0 0 0.5rem 0;
+  text-shadow: 3px 3px 0px #1e3a8a;
+  line-height: 1.4;
 }
 
 .win-modal-content p {
   font-family: 'Inter', sans-serif;
-  color: #0F3C65;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 2rem;
-  opacity: 0.9;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #FFF2BA;
+  margin: 0 0 1.5rem 0;
+  text-shadow: 1px 1px 0px #1e3a8a;
+  line-height: 1.5;
 }
 
-.win-btn {
+.win-btn,
+.menu-btn {
   font-family: 'Inter', sans-serif;
-  padding: 0.9rem 1.5rem;
+  width: 100%;
+  padding: 1rem 1.2rem;
   font-size: 1rem;
   font-weight: 700;
-  width: 200px;
-  border-radius: 1000px;
-  background-color:  #0F3C65;
-  color: #FFF2BA;
-  border: 3px solid #082138;
+  border-radius: 14px;
+  background-color: #FFF2BA;
+  color: #1e3a8a;        
+  border: 3px solid #60a5fa;
   cursor: pointer;
-  box-shadow: 4px 4px 0px #082138;
-  margin-right: 15px;
+  box-shadow: 4px 4px 0px #60a5fa;
+  box-sizing: border-box;
+  margin-top: 0.75rem;
 }
 
-.menu-btn{
-  font-family: 'Inter', sans-serif;
-  padding: 0.9rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 700;
-  width: 200px;
-  border-radius: 1000px;
-  background-color:  #0F3C65;
-  color: #FFF2BA;
-  border: 3px solid #082138;
-  cursor: pointer;
-  box-shadow: 4px 4px 0px #082138;
+.win-btn:hover,
+.menu-btn:hover {
+  background-color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 4px 7px 0px #60a5fa;
 }
+
+
+
