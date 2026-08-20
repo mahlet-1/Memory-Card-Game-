@@ -99,3 +99,16 @@
   font-weight: 600;
   margin: 0;
 }
+
+@media (max-width: 768px) {
+
+  .game-board {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 340px; 
+    padding: 0;
+    justify-content: center;
+    border: none;
+  }
+}

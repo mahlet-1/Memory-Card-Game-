@@ -70,3 +70,16 @@
   transform: translateY(-3px);
   box-shadow: 4px 7px 0px #0f172a;
 }
+
+@media (max-width: 768px) {
+  .header-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+  }
+}
