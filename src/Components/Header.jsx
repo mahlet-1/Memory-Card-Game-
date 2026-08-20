@@ -1,11 +1,11 @@
-import '../Styles/Header.css'
-import PokemonLogo from '../assets/PokemonLogo 1.png'
+import '../Styles/Header.css';
+import PokLogo from '../assets/PokLogo.png';
 
 export default function Header({ score, bestScore, onPlayAgain, onRestart}) {
   return (
     <header className="header-box">
       <div className="header-left">
-        <img src={PokemonLogo} alt="Pokmemo Logo" className="game-logo" />
+        <img src={PokLogo} alt="Pokmemo Logo" className="game-logo" />
         <h1 className="game-title">Pokmemo</h1>
       </div>
 
