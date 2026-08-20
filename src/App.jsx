@@ -4,6 +4,7 @@ import DifficultySelector from './Components/DifficultySelector';
 import GameBoard from './Components/GameBoard';
 import WinModal from './Components/WinModal';
 import GameOverModal from './Components/GameOverModal';
+import QuitModal from './Components/QuitModal';
 
 export default function App() {
   const [difficulty, setDifficulty] = useState(null);
@@ -18,6 +19,7 @@ export default function App() {
   const [isWon, setIsWon] = useState(false);
   const [isGameOver, setIsGameOver] = useState(false);
   const [error, setError] = useState(null);
+  const [isQuitModalOpen, setIsQuitModalOpen] = useState(false);
 
   function shuffleArray(array) {
     const shuffled = [...array];
@@ -85,14 +87,13 @@ export default function App() {
     setCards(shuffleArray(cards));
   }
 
-const handleReset = () => {
+  const handleReset = () => {
     setScore(0);
     setClickedCardIds([]);
     setIsWon(false);
     setIsGameOver(false);
     setCards(shuffleArray(cards)); 
   };
-
 
   const handleMainMenu = () => {
     setScore(0);
@@ -103,14 +104,31 @@ const handleReset = () => {
     setDifficulty(null); 
   };
 
+  const handleRequestQuit = () => {
+    setIsQuitModalOpen(true);
+  };
+
+  const handleQuit = () => {
+    setScore(0);
+    setClickedCardIds([]);
+    setIsWon(false);
+    setIsGameOver(false);
+    setCards([]); 
+    setDifficulty(null); 
+    setIsQuitModalOpen(false); 
+  };
+
+  const handleCancelQuit = () => {
+    setIsQuitModalOpen(false);
+  };
+
   return (
     <div className="app">
       <Header 
-      score={score} 
-      bestScore={bestScore} 
-      onPlayAgain={handleReset} 
-      onRestart={handleMainMenu}
-      
+        score={score} 
+        bestScore={bestScore} 
+        onPlayAgain={handleReset} 
+        onRestart={handleRequestQuit}
       />
 
       {error && (
@@ -125,6 +143,13 @@ const handleReset = () => {
         <GameBoard 
           cards={cards} 
           onCardClick={handleCardClick} 
+        />
+      )}
+
+      {isQuitModalOpen && (
+        <QuitModal 
+          onQuit={handleQuit} 
+          onCancelQuit={handleCancelQuit} 
         />
       )}
 
