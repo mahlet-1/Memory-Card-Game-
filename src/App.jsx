@@ -20,6 +20,7 @@ export default function App() {
   const [isGameOver, setIsGameOver] = useState(false);
   const [error, setError] = useState(null);
   const [isQuitModalOpen, setIsQuitModalOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   function shuffleArray(array) {
     const shuffled = [...array];
@@ -34,6 +35,7 @@ export default function App() {
     if (!difficulty) return;
 
     async function fetchPokemon() {
+      setIsLoading(true);
       try {
         setError(null);
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${difficulty}`);
@@ -53,14 +55,16 @@ export default function App() {
         );
 
         setCards(pokemonDetails);
+        setIsLoading(false);
       } catch (err) {
         setError("Failed to load Pokémon. Please check your internet connection.");
         console.error("Technical error:", err);
+        setIsLoading(false);
       }
     }
-
-    fetchPokemon();
+      fetchPokemon();
   }, [difficulty]);
+
 
   function handleCardClick(pokemonId) {
     if (clickedCardIds.includes(pokemonId)) {
@@ -137,7 +141,12 @@ export default function App() {
         </div>
       )}
 
-      {!difficulty ? (
+     {isLoading ? (
+        <div className="loading-container">
+          <div className="spinner"></div>
+          <p>Loading Cards...</p>
+        </div>
+      ) : !difficulty ? (
         <DifficultySelector setDifficulty={setDifficulty} />
       ) : (
         <GameBoard 

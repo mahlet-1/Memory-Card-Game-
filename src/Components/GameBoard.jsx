@@ -4,10 +4,6 @@ import Card from './Card';
 export default function GameBoard({ cards, onCardClick }) {
   return (
     <div className="game-container">
-      <div className="top-text">
-        <p>Status: Playing</p>
-      </div>
-
       <div className="game-board">
         {cards.map((pokemon) => (
           <Card

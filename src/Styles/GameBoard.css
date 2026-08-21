@@ -7,20 +7,6 @@
   box-sizing: border-box;
 }
 
-.top-text {
-  text-align: center;
-  margin-top: 10px;
-  padding: 0.5rem 1rem;
-}
-
-.top-text p {
-  font-family: 'Press Start 2P', monospace;
-  color: #FFF2BA;
-  font-size: 1rem;
-  text-shadow: 3px 3px 0px #053774;
-  margin: 0;
-  letter-spacing: 1px;
-}
 
 .game-board {
   display: flex;
