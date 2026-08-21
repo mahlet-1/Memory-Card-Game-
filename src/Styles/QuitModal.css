@@ -20,8 +20,8 @@
   width: 90%;
   max-width: 500px;
   padding: 2.5rem 2rem;
-  background-color: rgba(125, 172, 211, 0.65); 
-  border: 4px solid #FFF2BA; 
+  background-color: #FFF2BA;
+  border: 4px solid #1e3a8a; 
   border-radius: 20px;
   box-shadow: 0 10px 0px #1e3a8a;
   box-sizing: border-box;
@@ -31,8 +31,7 @@
 .quit-modal-content h2 {
   font-family: 'Press Start 2P', monospace;
   font-size: 1.15rem;
-  color: #FFF2BA;
-  text-shadow: 2px 2px 0px #1e3a8a;
+  color: #1e3a8a;
   margin-top: 1rem;
   line-height: 1.4;
 }
@@ -41,7 +40,7 @@
   font-family: 'Inter', sans-serif;
   font-size: 0.9rem;
   font-weight: 500;
-  color: #FFF2BA;
+  color: #1e3a8a;
   margin-bottom: 2rem;
   line-height: 1.5;
 }
@@ -62,14 +61,14 @@
   border-radius: 14px;
   cursor: pointer;
   box-sizing: border-box;
-  background-color: #FFF2BA;
-  color: #1e3a8a;
+  background-color: #bc5c5c;
+  color: #FFF2BA;
   border: 3px solid #325a8a;
   box-shadow: 4px 4px 0px #14273d;
 }
 
 .yes-btn:hover {
-  background-color: #a7c5eb;
+  background-color: #781d1d;
   color: #FFF2BA;
   transform: translateY(-3px);
   box-shadow: 4px 7px 0px #14273d;
@@ -85,15 +84,16 @@
   border-radius: 14px;
   cursor: pointer;
   box-sizing: border-box;
-  background-color: #d87171;
-  color: #FFF2BA;
-  border: 3px solid #902b2b;
-  box-shadow: 4px 4px 0px #5c1414;
+  background-color: #a7c5eb;
+  color: #1e3a8a;  
+  border: 3px solid #1e3a8a;
+  box-shadow: 4px 4px 0px #1e3a8a;
 }
 
 .no-Btn:hover {
-  background-color: #993030;
+  background-color: #4b72a5;
+  color: #FFF2BA;
   transform: translateY(-3px);
-  box-shadow: 4px 7px 0px #5c1414;
+  box-shadow: 4px 7px 0px #14273d;
 }
 
