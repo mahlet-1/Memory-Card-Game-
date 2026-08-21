@@ -6,6 +6,17 @@ import WinModal from './Components/WinModal';
 import GameOverModal from './Components/GameOverModal';
 import QuitModal from './Components/QuitModal';
 
+function getRandomIds(count) {
+  const ids = [];
+  while (ids.length < count) {
+    const randomId = Math.floor(Math.random()*898) + 1;
+    if (!ids.includes(randomId)){
+      ids.push(randomId);
+    }
+  }
+  return ids;
+}
+
 export default function App() {
   const [difficulty, setDifficulty] = useState(null);
   const [cards, setCards] = useState([]);
@@ -38,30 +49,30 @@ export default function App() {
       setIsLoading(true);
       try {
         setError(null);
-        const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${difficulty}`);
-        const data = await response.json();
-
-        const pokemonDetails = await Promise.all(
-          data.results.map(async (pokemon) => {
-            const res = await fetch(pokemon.url);
-            const pokemonData = await res.json();
-            
+        const ids = getRandomIds(difficulty);
+        const promises = ids.map(async(id) => {
+           const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
+           if (!response.ok) {
+            throw new Error(`Failed to fetch Pokemon #${id}`);
+           }
+            const pokemonData = await response.json();
             return {
               id: pokemonData.id,
               name: pokemonData.name,
-              image: pokemonData.sprites.front_default,
+              image: pokemonData.sprites.other["official-artwork"].front_default,
             };
-          })
-        );
+          });
 
-        setCards(pokemonDetails);
-        setIsLoading(false);
-      } catch (err) {
-        setError("Failed to load Pokémon. Please check your internet connection.");
-        console.error("Technical error:", err);
-        setIsLoading(false);
-      }
+          const pokemon = await Promise.all(promises);
+          setCards(pokemon);
+        } catch (err) {
+          console.error("Failed to load Pokemon:", err);
+          setError("Failed to load Pokémon. Please check your internet connection.");
+        } finally {
+          setIsLoading(false);
+        }
     }
+
       fetchPokemon();
   }, [difficulty]);
 
