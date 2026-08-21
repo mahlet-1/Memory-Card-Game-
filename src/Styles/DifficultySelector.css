@@ -27,6 +27,7 @@
   box-shadow: 0 10px 0px #1e3a8a;
   box-sizing: border-box;
   text-align: center;
+  animation: popcard 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 }
 
 
@@ -96,5 +97,21 @@
   font-size: 0.85rem;
   font-weight: 700;
   opacity: 0.9;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popcard {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 
