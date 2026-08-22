@@ -10,13 +10,13 @@ export default function DifficultySelector({ setDifficulty }) {
         
         <h3>SELECT DIFFICULTY</h3>
         <div className="button-group">
-          <button className="diff-btn easy" onClick={() => setDifficulty(6)}>
+          <button className="diff-btn" onClick={() => setDifficulty(6)}>
             Easy <span className="card-count">(6 Cards)</span>
           </button>
-          <button className="diff-btn medium" onClick={() => setDifficulty(10)}>
+          <button className="diff-btn" onClick={() => setDifficulty(10)}>
             Medium <span className="card-count">(10 Cards)</span>
           </button>
-          <button className="diff-btn hard" onClick={() => setDifficulty(15)}>
+          <button className="diff-btn" onClick={() => setDifficulty(15)}>
             Hard <span className="card-count">(15 Cards)</span>
           </button>
         </div>

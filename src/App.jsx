@@ -175,12 +175,6 @@ export default function App() {
 
       {isWon && (
         <WinModal 
-          score={score} 
-          bestScore={bestScore}
-          setDifficulty={setDifficulty} 
-          setIsWon={setIsWon} 
-          setClickedCardIds={setClickedCardIds} 
-          setScore={setScore}
           onPlayAgain={handleReset}
           onRestart={handleMainMenu}
         />
@@ -188,12 +182,6 @@ export default function App() {
 
       {isGameOver && (
         <GameOverModal 
-          score={score} 
-          bestScore={bestScore}
-          setDifficulty={setDifficulty} 
-          setIsGameOver={setIsGameOver} 
-          setClickedCardIds={setClickedCardIds} 
-          setScore={setScore}
           onPlayAgain={handleReset}
           onRestart={handleMainMenu}
         />
